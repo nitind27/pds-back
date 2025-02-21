@@ -33,6 +33,7 @@ db.connect((err) => {
   console.log("Connected to MySQL database.");
 });
 
+
 // // Create Employee Table (if not exists)
 // db.query(`
 //   CREATE TABLE IF NOT EXISTS employees (
@@ -1041,4 +1042,8 @@ app.get("/api/getRowCounts", (req, res) => {
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+});
+
+app.get('/', (req, res) => {
+  res.send('API is running');
 });
